@@ -117,7 +117,7 @@ typedef enum : NSUInteger {
             return _monthArray[row];
             break;
         case BLComponentTypeDay:
-            return self.dayArray[row];
+            return row < self.dayArray.count ? self.dayArray[row] : @"";
             break;
         case BLComponentTypeHour:
             return _hourArray[row];
